@@ -34,7 +34,6 @@ return {
 				"dockerls",
 				"ts_ls",
 				"tsp_server",
-				"pyright",
 			},
 		})
 
@@ -43,7 +42,6 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"eslint_d", -- js linter
-				"ruff", -- fast Python linter and formatter
 			},
 		})
 	end,

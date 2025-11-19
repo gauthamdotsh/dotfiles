@@ -103,17 +103,22 @@ return {
 					},
 				})
 			end,
-			["pyright"] = function()
-				-- configure pyright for Python (replaces pylsp for better performance)
-				lspconfig["pyright"].setup({
+			["pylsp"] = function()
+				-- configure python server (with special settings)
+				lspconfig["pylsp"].setup({
 					capabilities = capabilities,
 					settings = {
-						python = {
-							analysis = {
-								autoSearchPaths = true,
-								useLibraryCodeForTypes = true,
-								diagnosticMode = "workspace",
-								typeCheckingMode = "basic", -- options: "off", "basic", "strict"
+						pylsp = {
+							plugins = {
+								pycodestyle = {
+									enabled = true,
+									ignore = { "E501" }, -- Ignore line length
+									maxLineLength = 88,
+								},
+								pydocstyle = { enabled = false },
+								mccabe = { enabled = false },
+								flake8 = { enabled = false },
+								yapf = { enabled = true }, -- Enable code formatting with Yapf
 							},
 						},
 					},
