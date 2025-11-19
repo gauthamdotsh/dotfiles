@@ -2,10 +2,11 @@ return {
 	"folke/tokyonight.nvim",
 	priority = 1000,
 	config = function()
-		local transparent = true -- set to true if you would like to enable transparency
+		local transparent = false -- set to true if you would like to enable transparency
 
 		require("tokyonight").setup({
-			style = "moon",
+			style = "night",
+			light_style = "day",
 			transparent = transparent,
 			styles = {
 				sidebars = transparent and "transparent" or "dark",
@@ -14,6 +15,6 @@ return {
 			on_colors = function(colors) end,
 		})
 
-		vim.cmd("colorscheme tokyonight-moon")
+		vim.cmd("colorscheme tokyonight-night")
 	end,
 }

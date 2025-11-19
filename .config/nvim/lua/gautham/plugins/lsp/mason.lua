@@ -34,6 +34,7 @@ return {
 				"dockerls",
 				"ts_ls",
 				"tsp_server",
+				"pyright",
 			},
 		})
 
@@ -41,7 +42,8 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"eslint_d",
+				"eslint_d", -- js linter
+				"ruff", -- fast Python linter and formatter
 			},
 		})
 	end,
