@@ -13,6 +13,7 @@ return {
 				floats = transparent and "transparent" or "dark",
 			},
 			on_colors = function(colors) end,
+			on_highlights = function(highlights, colors) end,
 		})
 
 		vim.cmd("colorscheme tokyonight-night")
