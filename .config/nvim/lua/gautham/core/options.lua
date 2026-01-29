@@ -10,7 +10,7 @@ vim.opt.expandtab = true -- expand tab to spaces
 vim.opt.autoindent = true -- copy indent from current line when starting new one
 vim.opt.smartindent = true
 vim.opt.wrap = true
-vim.opt.winborder = 'rounded'
+vim.opt.winborder = "rounded"
 
 -- disable newline at EOF (Neovim setting, not Prettier)
 vim.opt.fixendofline = false
